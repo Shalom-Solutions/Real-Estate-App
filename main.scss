@@ -10,6 +10,7 @@ $bghoverCol: rgb(128 128 128);
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    // font-family: 'Kumbh Sans', sans-serif;
 }
 
 nav  {
@@ -26,8 +27,8 @@ nav  {
 
     .logo {
         img {
-            height: 60px;
-            width: 60px;
+            height: 50px;
+            width: 50px;
             border-radius: 50%;
             background-color: $textcolor;
             color: $needcolor ;
@@ -47,10 +48,12 @@ nav  {
             padding-left: 1.5rem;
             list-style: none;
             justify-content: space-between;
+            font-size: 1.2rem;
 
             @media (max-width:576px){
                 text-align: center;
                 padding-left: .5rem;
+                font-size: 1rem;
             
             }
 
@@ -61,7 +64,7 @@ nav  {
 
                 &:hover{
                     color: $bgcolor;
-                    padding: .8em 1rem;
+                    padding: .6rem .8rem;
                     background-color: $textcolor;
                     border: 1px solid $bgcolor;
                     border-radius: 10px;
@@ -96,7 +99,7 @@ main {
         }
         h1 {
             width: 50%;
-            font-size: 4rem;
+            font-size: 4.2rem;
             margin-bottom: 2.5rem;
             color: $bgcolor;
             
