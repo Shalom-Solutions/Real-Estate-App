@@ -1,9 +1,15 @@
-$textcolor: #E5FDCE;
-$hovercolor: #1bbd32;
-$bgcolor: #104a0d;
-$accentcolor: #45871b;
-$needcolor:  #fff;
-$bghoverCol: rgb(128 128 128);
+@import 'color';
+
+%center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 1rem;
+            border-radius: 4px;
+            
+}
 
 
 * {
@@ -109,6 +115,10 @@ main {
             padding-left: 2rem;
             width: 60%;
             color: $bghoverCol;
+            @media (max-width:576px){
+                color: $darkbrown;
+                font-weight: 700;
+            }
         }
         a{
             text-decoration: none;
@@ -126,9 +136,216 @@ main {
             }
             
         }
+    }   
+}
+
+.discuss1 {
+    // margin: 5rem;
+    // background-color:$discuss1bgColor;
+    // padding: 2.5rem 1.5rem;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-around;
+    // gap: 2rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background-color: $discuss1bgColor;
+    margin: 9rem;
+        @media (max-width: 576px) {
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 100%;
+            gap:1rem;
+            margin: 0 auto;
+        }
+        .left {
+            display: block;
+            margin: 0 auto;
+            padding: 40px 20px;
+           
+            & img {
+                height: 380px;
+                width: 380px;
+                @media (max-width:576px){
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+        }
+        .right {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            @media (max-width:576px){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+            }
+                 h1 {
+                    padding-bottom: 1rem;
+                    font-size: 3rem;
+                    color: $bgcolor;
+                    @media (max-width:576px){
+                        text-align: left;
+                        width: 70%;
+                        font-size: 2.5rem;
+                    }
+                }
+                p {
+                    padding-bottom: 2rem;
+                    font-weight: 400;
+                    width: 78%;
+                    color: $darkbrown;
+                }
+                a{
+                    text-decoration: none;
+                    color: $bghoverCol;
+                    background-color: $textcolor;
+                    padding: .8em 1.6rem;
+                    border: 2px solid $bgcolor;
+                    border-radius: 10px;
+                    // margin-left: 5rem;
+                    @media (max-width:576px){
+                       display: block;
+                        margin: 0 auto;
+                        text-align: center;
+                        width: 50%;
+                    }
+
+                    &:hover{
+                        color: $bgcolor;
+                        border: 1.5px dotted $accentcolor;
+                        border-radius: 10px;
+                        transition: all 0.4s ease;
+                    }
+                    
+                }
+                
+        }
+}
+.discuss2 {
+    display: flex;
+    margin: 2rem 9rem;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media (max-width:576px){
+        display: grid;
+        margin: 0rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+   & h2 {
+        font-size: 3rem;
+        color:$bgcolor;
+        padding-bottom: .5rem;
+        @media (max-width:576px){
+            width: 80%;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 2.5rem;
+            padding: 1.5rem;
+        
+        }
+    }
+    h4 {
+        font-size: 1.2rem;
+        color:$darkbrown;
+        padding-bottom: .5rem;
+
+        @media (max-width:576px){
+            width: 80%;
+            text-align: center;
+            margin: 0 auto;
+        
+        }
     }
 
 
-    
-     
+        .division {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+
+            @media (max-width:576px){
+               display: grid;
+               grid-template-columns: repeat(1, 1fr);
+               grid-template-rows: repeat(3, 1fr);
+               gap: .5rem;
+            }
+         
+                .sma {
+                   @extend %center;
+                   background-color: $smacolor;
+                  
+                     h4{
+                        font-size: 1.5rem;
+                        padding: 1.5rem;
+                     }
+                     p {
+                        font-size: 1.2rem;
+                        font-weight: 300;
+                        width: 90%;
+                        padding-bottom: 1rem
+                     }
+
+                     @media (max-width:576px){
+                       
+                    }
+                }
+                .smm {
+                    @extend %center;
+                    background-color: $smmcolor;
+
+                    h4{
+                        font-size: 1.5rem;
+                        padding: 1.5rem;
+                        width: 70%;
+                     }
+                     p {
+                        font-size: 1.2rem;
+                        font-weight: 300;
+                        width: 90%;
+                        padding-bottom: 1rem
+                     }
+                 }
+                 .smad {
+                    @extend %center;
+                    background-color: $smadcolor;
+        
+
+                    h4{
+                        font-size: 1.5rem;
+                        padding: 1.5rem;
+                     }
+                     p {
+                        font-size: 1.2rem;
+                        font-weight: 300;
+                        width: 90%;
+                        padding-bottom: 1rem
+                     }
+                 }
+        }
+
+}
+
+footer {
+
+    display: block;
+    margin: 0 auto;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: $discuss1bgColor;
+    font-size: 1.2rem;
+
 }
