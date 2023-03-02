@@ -15,7 +15,10 @@
 }
 
 nav {
+  position: sticky;
+  top: 0;
   padding: 0.6rem 3rem;
+  z-index: 2;
   background-color: #104a0d;
   display: flex;
   justify-content: space-between;

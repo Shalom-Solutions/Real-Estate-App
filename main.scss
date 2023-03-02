@@ -20,7 +20,10 @@
 }
 
 nav  {
+    position: sticky;
+    top: 0;
     padding: 0.6rem 3rem;
+    z-index: 2;
     background-color: $bgcolor;
     display: flex;
     justify-content: space-between;
